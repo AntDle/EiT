@@ -1,0 +1,215 @@
+/* =========================
+   Base / tokens
+========================= */
+:root{
+  --bg:#f6f7f9;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --accent:#1f5f8b;
+  --accent2:#0f766e;
+  --danger:#b91c1c;
+  --shadow:0 8px 24px rgba(17,24,39,.08);
+  --radius:16px;
+  --max:980px;
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit}
+
+/* =========================
+   Layout
+========================= */
+.wrap{max-width:var(--max); margin:0 auto; padding:18px}
+main{padding:22px 0 48px}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow: var(--shadow);
+  padding:18px;
+}
+
+.section{margin-top:18px}
+.section h2{margin:0 0 10px; font-size:18px}
+
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+@media (max-width: 860px){ .grid3{grid-template-columns:1fr} }
+
+.small{font-size:13px}
+.muted{color:var(--muted)}
+ul{margin:10px 0 0; padding-left:18px}
+li{margin:6px 0}
+
+/* =========================
+   Header / nav
+========================= */
+header{
+  position:sticky; top:0; z-index:10;
+  background:rgba(246,247,249,.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px}
+
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+.brand strong{font-size:16px; letter-spacing:.2px}
+
+.logo{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  background:white;
+  object-fit:cover;
+  object-position:center;
+}
+
+nav{display:flex; gap:14px; flex-wrap:wrap}
+nav a{
+  font-size:14px;
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:10px
+}
+nav a:hover{background:rgba(17,24,39,.05); color:var(--text)}
+
+.btn-help{
+  background:var(--danger);
+  color:white;
+  text-decoration:none;
+  padding:10px 12px;
+  border-radius:12px;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-help:hover{filter:brightness(.95)}
+
+/* =========================
+   Hero
+========================= */
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; align-items:start}
+@media (max-width: 860px){ .hero{grid-template-columns:1fr} }
+
+h1{margin:0 0 8px; font-size:26px}
+.lead{margin:0; color:var(--muted); font-size:15px}
+
+.pillrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 10px; border-radius:999px;
+  background:rgba(31,95,139,.08);
+  color:var(--text); font-size:13px;
+  border:1px solid rgba(31,95,139,.15);
+  text-decoration:none;
+}
+.pill.alt{background:rgba(15,118,110,.08); border-color:rgba(15,118,110,.18)}
+.pill.gray{background:rgba(17,24,39,.04); border-color:rgba(17,24,39,.08)}
+
+/* =========================
+   Checklist
+   (matcher HTML-en din: input + div, ikke span)
+========================= */
+.checklist label{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:10px 0;
+  border-top:1px solid var(--line);
+}
+.checklist label:first-child{border-top:none; padding-top:0}
+input[type="checkbox"]{margin-top:3px}
+
+/* Strikethrough på innholdet (div) når checkbox er sjekket */
+.checklist input:checked + div{
+  opacity:.55;
+}
+.checklist input:checked + div strong{
+  text-decoration: line-through;
+}
+
+/* =========================
+   Callout / help
+========================= */
+.callout{
+  border-left:4px solid var(--danger);
+  background:rgba(185,28,28,.06);
+}
+.callout h3{margin:0 0 6px; font-size:16px}
+
+.helpgrid{display:grid; gap:10px}
+.helpgrid a{
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:12px;
+  border:1px solid rgba(185,28,28,.18);
+  text-decoration:none;
+  background:rgba(255,255,255,.65);
+}
+.helpgrid a:hover{background:white}
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background:rgba(17,24,39,.06);
+  padding:2px 6px;
+  border-radius:6px;
+  border:1px solid rgba(17,24,39,.08)
+}
+
+/* =========================
+   Map (bilde + klikkpunkter)
+========================= */
+.mapBlock{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:14px;
+  align-items:start;
+}
+@media (max-width: 900px){ .mapBlock{grid-template-columns:1fr} }
+
+.mapWrap{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+}
+.mapImg{width:100%; height:auto; display:block}
+
+.mapPin{
+  position:absolute;
+  width:14px; height:14px;
+  border-radius:999px;
+  border:2px solid #fff;
+  background:#111;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+}
+.mapPin:hover{transform:translate(-50%,-50%) scale(1.1)}
+.mapPin:focus{outline:3px solid rgba(59,130,246,.6); outline-offset:3px}
+.mapPin.is-selected{background:#2563eb}
+
+.localPanel{
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+}
+.localPanel ul{margin:8px 0 0 18px}
+
+/* =========================
+   Footer
+========================= */
+footer{
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  padding:18px 0
+}
