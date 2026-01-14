@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akkurat nå – etterpå.org</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="etterpå.org">
+        <img src="etterpaa-v2.png" alt="etterpå.org" class="logo">
+        <strong>etterpå.org</strong>
+      </a>
+
+      <nav aria-label="Hovedmeny">
+        <a href="akkurat_naa.html">Akkurat nå</a>
+        <a href="sorg.html">Sorg og følelser</a>
+        <a href="tiden-videre.html">Tiden videre</a>
+        <a href="min-side.html">Min side</a>
+      </nav>
+
+      <a class="btn-help" href="index.html#hjelp">Få hjelp nå</a>
+    </div>
+  </div>
+</header>
+
+<main id="topp">
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="card">
+        <h1>Akkurat nå</h1>
+        <p class="lead">
+          De første dagene kan være preget av sjokk og kaos. Det er normalt å ikke føle at man har kontroll eller overskudd.
+        </p>
+
+        <div class="pillrow" aria-label="Hurtigvalg">
+          <a class="pill" href="#sjekkliste">🧾 Sjekkliste</a>
+          <a class="pill alt" href="#forklaringer">🧠 Forklaringer</a>
+          <a class="pill gray" href="#kan-vente">⏳ Kan vente</a>
+        </div>
+
+        <div class="section">
+          <h2>Det viktigste først</h2>
+          <ul class="small muted">
+            <li>Du trenger ikke ta alle avgjørelser nå.</li>
+            <li>Det er lov å be andre gjøre ting for deg.</li>
+            <li>Noter spørsmål – svar kan komme senere.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="card callout" id="hjelp">
+        <h3>Få hjelp nå</h3>
+        <p class="muted small" style="margin-top:0">
+          Ved akutt fare: ring <span class="kbd">113</span>. Hvis du trenger noen å snakke med:
+        </p>
+
+        <div class="helpgrid">
+          <a href="tel:113">
+            <span>📞 Akutt: 113</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#" onclick="return false;">
+            <span>🏥 Finn offentlig hjelp (kommer)</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#" onclick="return false;">
+            <span>💬 Chat / anonym støtte (kommer)</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <p class="muted small" style="margin-bottom:0">
+          Dette er en prototype. Målet er å gi trygg, enkel oversikt – ikke erstatte helsehjelp.
+        </p>
+      </aside>
+    </section>
+
+    <section class="section" id="sjekkliste">
+      <div class="card">
+        <div class="checkhead">
+          <div>
+            <h2 style="margin:0">Praktisk sjekkliste</h2>
+            <p class="muted small" style="margin:6px 0 0">
+              Kryss av etter hvert som ting er gjort. Listen lagres kun på denne enheten.
+            </p>
+          </div>
+
+          <div class="checkactions">
+            <span class="muted small" id="progressText">0/0 gjort</span>
+            <button type="button" class="btn" id="resetChecklist">Nullstill</button>
+          </div>
+        </div>
+
+        <!-- Klikkbare punkter med forklaring -->
+        <div class="checklist" id="death-checklist">
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="melde-dodsfall">
+                <span>Melde inn dødsfall</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Dette gjøres vanligvis av lege/institusjon, men kan variere. Hvis du er usikker: kontakt lege, sykehjem eller begravelsesbyrå.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="henting">
+                <span>Henting av avdøde</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Avklares med stedet dødsfallet skjedde (hjem/institusjon). Begravelsesbyrå kan ofte koordinere dette raskt.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="ansvarlig">
+                <span>Avklare hvem som er ansvarlig for begravelsen</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              En eller flere tar praktisk ansvar: kontaktpunkt, avtaler, beslutninger og dialog med byrå/kirke/seremonileder.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="planlegging">
+                <span>Planlegging av begravelsen</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Valg av dato, sted, seremoni, musikk, blomster, annonse/dødsannonse og evt. kremasjon. Ta én ting av gangen.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="parorende">
+                <span>Gi beskjed til pårørende</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Du kan delegere: be én person ringe de nærmeste, og én person sende samlet melding til resten.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="syning">
+                <span>Syning</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Noen ønsker å se avdøde, andre ikke. Begge deler er helt normalt. Be byrå/institusjon om praktisk info.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="transport">
+                <span>Kistetransport</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Koordineres ofte av begravelsesbyrå mellom institusjon, seremonisted og gravplass/krematorium.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="begravelse">
+                <span>Begravelsen</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Program, hvem som sier noe, praktiske roller (bære kiste, musikk, blomster). Hold det enkelt hvis det trengs.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="minnesamvar">
+                <span>Minnesamvær</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Kan være stort eller veldig lite. Det viktigste er et sted å samles – også en kaffe hjemme kan være nok.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="papirer">
+                <span>Papirer og skjemaer</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Dette kan ofte tas senere. Lag en mappe (digitalt eller fysisk) og legg alt på ett sted.
+            </div>
+          </details>
+
+          <details class="citem">
+            <summary>
+              <label>
+                <input type="checkbox" data-key="arv">
+                <span>Arveoppgjør</span>
+              </label>
+            </summary>
+            <div class="small muted cdesc">
+              Arv er sjelden “nå-nå”. Noter hvem som kan hjelpe (bank/advokat/skifte) og ta ett steg av gangen.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kan-vente">
+      <div class="card">
+        <h2>Dette kan vente</h2>
+        <p class="small muted" style="margin-top:0">
+          Økonomi, rydding, papirarbeid og “praktiske detaljer” haster sjelden første dager.
+          Hvis du må gjøre noe: velg én liten ting og stopp der.
+        </p>
+      </div>
+    </section>
+
+    <footer class="wrap">
+      <div class="muted">
+        etterpå.org (prototype) • Minimal datainnsamling • Ikke en erstatning for helsehjelp
+      </div>
+    </footer>
+
+  </div>
+</main>
+
+<script>
+  (function () {
+    const boxes = document.querySelectorAll('#death-checklist input[type="checkbox"]');
+    boxes.forEach(box => {
+      const key = 'check_' + box.dataset.key;
+      box.checked = localStorage.getItem(key) === 'true';
+      box.addEventListener('change', () => localStorage.setItem(key, box.checked));
+    });
+  })();
+</script>
+
+</body>
+</html>

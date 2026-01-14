@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="org">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>etterpå.org – støtte etter dødsfall</title>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#topp" aria-label="etterpå.no">
+          <img
+            src="assets/etterpåv2.png"
+            alt="etterpå.org"
+            class="logo"
+            aria-hidden="false"
+          />
+
+          <strong>etterpå.org</strong>
+        </a>
+
+        <nav aria-label="Hovedmeny">
+          <a href="#akkurat-naa">Akkurat nå</a>
+          <a href="#sorg">Sorg og følelser</a>
+          <a href="#videre">Tiden videre</a>
+          <a href="#min-side">Min side</a>
+        </nav>
+
+        <a class="btn-help" href="#hjelp">Få hjelp nå</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="topp">
+    <div class="wrap">
+      <section class="hero">
+        <div class="card">
+          <h1>Støtte etter dødsfall</h1>
+          <p class="lead">
+            etterpå.org samler det viktigste for pårørende: Hva som kan vente, hva som bør gjøres,
+            og små støttepunkt når det er tungt.
+          </p>
+
+          <div class="pillrow" aria-label="Hurtigvalg">
+            <a class="pill" href="akkurat_naa.html">🧾 Hva nå?</a>
+            <a class="pill alt" href="#sorg">🫧 Følelser</a>
+            <a class="pill gray" href="#videre">📅 Fremover/etterpå</a>
+          </div>
+
+          <div class="section">
+            <h2>Start her</h2>
+            <p class="muted small">
+              Hvis du bare orker én ting: velg én liten oppgave eller les én kort tekst.
+              Du trenger ikke gjøre alt nå.
+            </p>
+          </div>
+        </div>
+
+        <aside class="card callout" id="hjelp">
+          <h3>Få hjelp nå</h3>
+          <p class="muted small" style="margin-top:0">
+            Ved akutt fare: ring <span class="kbd">113</span>. Hvis du trenger noen å snakke med:
+          </p>
+
+          <div class="helpgrid">
+            <a href="#" onclick="alert('Prototype-lenke: legg inn reelle numre/lenker i prosjektet.'); return false;">
+              <span>📞 Snakk med noen (døgnåpent)</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="#" onclick="alert('Prototype-lenke: legg inn Helsenorge / lokale tjenester.'); return false;">
+              <span>🏥 Finn offentlig hjelp</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="#" onclick="alert('Prototype-lenke: legg inn frivillige/krisetelefoner.'); return false;">
+              <span>💬 Chat / anonym støtte</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="muted small" style="margin-bottom:0">
+            Dette er en prototype. Målet er ikke å erstatte helsehjelp.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section" id="lokalt">
+  <div class="card">
+    <h2>Finn lokale ressurser</h2>
+    <p class="muted small" style="margin-top:0">Trykk på et punkt nær deg.</p>
+
+    <div class="mapBlock">
+      <div class="mapWrap" role="img" aria-label="Kart med klikkbare punkter">
+        <img src="assets/norge-kart.png" alt="Kart over Norge" class="mapImg" />
+
+        <!-- Punkter (eksempler). Juster left/top senere -->
+        <button class="mapPin" data-place="oslo" style="left:72%; top:70%" aria-label="Oslo"></button>
+        <button class="mapPin" data-place="bergen" style="left:40%; top:72%" aria-label="Bergen"></button>
+        <button class="mapPin" data-place="trondheim" style="left:55%; top:45%" aria-label="Trondheim"></button>
+        <button class="mapPin" data-place="tromso" style="left:60%; top:18%" aria-label="Tromsø"></button>
+      </div>
+
+      <div id="localPanel" class="localPanel" aria-live="polite">
+        <strong>Velg et sted</strong>
+        <div class="muted small">Ressurser vises her.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section" id="sorg">
+        <h2>Sorg og følelser</h2>
+        <div class="grid3">
+          <div class="card">
+            <strong>Dette kan være normalt</strong>
+            <ul class="small muted">
+              <li>Tomhet, uro, nummenhet</li>
+              <li>Gråt eller ingen gråt</li>
+              <li>Skyld, irritasjon, lettelse</li>
+              <li>Problemer med søvn og mat</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>Når det blir for mye (1 min)</strong>
+            <p class="small muted">
+              Sett føttene i gulvet. Pust rolig inn i 4, ut i 6, tre ganger.
+              Se deg rundt og finn 3 ting du kan beskrive.
+            </p>
+          </div>
+          <div class="card">
+            <strong>En setning du kan sende</strong>
+            <p class="small muted" style="margin-bottom:10px">
+              “Hei. Jeg har mistet noen nær. Jeg trenger litt ro nå, men blir glad for praktisk hjelp senere.”
+            </p>
+            <button type="button" onclick="navigator.clipboard?.writeText('Hei. Jeg har mistet noen nær. Jeg trenger litt ro nå, men blir glad for praktisk hjelp senere.'); alert('Kopiert (hvis nettleseren tillater).');"
+              style="padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:white;cursor:pointer;font-weight:600">
+              Kopier tekst
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="videre">
+        <div class="card">
+          <h2>Tiden videre</h2>
+          <p class="muted small" style="margin-top:0">
+            Etter begravelsen kan det bli stillere rundt deg. Det betyr ikke at du “gjør noe feil”.
+          </p>
+          <div class="grid3">
+            <div class="card" style="box-shadow:none">
+              <strong>Ensomhet</strong>
+              <p class="small muted">Planlegg én lavterskel kontakt i uka: Gåtur, kaffe, eller en melding.</p>
+            </div>
+            <div class="card" style="box-shadow:none">
+              <strong>Jobb/skole</strong>
+              <p class="small muted">Sørg påvirker fokus. Avtal små, konkrete forventninger for de første ukene.</p>
+            </div>
+            <div class="card" style="box-shadow:none">
+              <strong>Merkedager</strong>
+              <p class="small muted">Lag en plan for datoer som kan trigge: hvem kan du kontakte, hva hjelper litt?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="min-side">
+        <div class="card">
+          <h2>Min side (prototype)</h2>
+          <p class="muted small" style="margin-top:0">
+            I en videre versjon kan brukeren lagre enkle ting privat: sjekklister, notater, og støttekontakter.
+          </p>
+          <ul class="small muted">
+            <li>Mine sjekklister</li>
+            <li>Notater / minner (lokalt på enheten)</li>
+            <li>Kontaktliste: “ring når det blir tungt”</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="wrap">
+        <div class="muted">
+          etterpå.org (prototype) • Minimal datainnsamling • Ikke en erstatning for helsehjelp
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
